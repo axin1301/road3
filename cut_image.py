@@ -18,7 +18,7 @@ if not os.path.exists('../temp_output/cut_image/'):
 
 for district in ['xixiangxian','shufuxian','guanghexian','danfengxian','jiangzixian','honghexian','liboxian','linquanxian','jingyuxian','lingqiuxian']:
     year = 2021
-    img_temp=Image.open('../temp_output/'+'topology_construction/'+district+'_GT_'+str(year)+'.png')
+    img_temp=Image.open('../../RoadNetwork_Validation_final/temp_output/'+'topology_construction/'+district+'_GT_'+str(year)+'.png')
     # img_temp=Image.open('pred_skeleton_疏附县_2021_2.png')
     print(np.shape(img_temp))
     img_temp_cut = np.array(img_temp)[int(np.shape(img_temp)[0]/2)-2500 : int(np.shape(img_temp)[0]/2)+2500, int(np.shape(img_temp)[1]/2)-2500 : int(np.shape(img_temp)[1]/2)+2500]
