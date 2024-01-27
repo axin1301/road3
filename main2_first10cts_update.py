@@ -23,7 +23,8 @@ def main():
     print("Hello World")
     #test()
     with open("time_log_first10cts_update.txt","w") as log_f:
-        for year in [2017,2021]:
+        # for year in [2017,2021]:
+        for year in [2021]:
             for up_para in [100,200]:
                 for county in ['xixiangxian','shufuxian','guanghexian','danfengxian','jiangzixian','honghexian','liboxian','linquanxian','jingyuxian','lingqiuxian']:
                 # for county in ['xixiangxian']:
@@ -65,7 +66,8 @@ def main():
 
         for up_para in [100,200]:
             df_all = pd.DataFrame({})
-            for year in [2017,2021]:
+            # for year in [2017,2021]:
+            for year in [2021]:
                 for county in ['shufuxian','xixiangxian','guanghexian','danfengxian','jiangzixian','honghexian','liboxian','linquanxian','jingyuxian','lingqiuxian']:
                     df = pd.read_csv('../output_update/'+county+'_'+str(year)+'_d500_'+str(up_para)+'.csv')
                     df_all = pd.concat([df_all, df])
