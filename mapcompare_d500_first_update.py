@@ -1336,7 +1336,7 @@ def mapcompare_d500_first_update(data_path,dataset,solution,compute_mode,year,up
     #             for c in ['knn']:#,'wmm'
     
     # second try
-    for i in [0.0005,0.001,0.01]: #
+    for i in [0.01]: #0.0005,0.001,
         for b in [45]:#,30
             for t in [i*10]:#
                 for c in ['knn']:#,'wmm'    

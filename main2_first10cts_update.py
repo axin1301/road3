@@ -25,14 +25,14 @@ def main():
     with open("time_log_first10cts_update.txt","w") as log_f:
         # for year in [2017,2021]:
         for year in [2021]:
-            for up_para in [100,200]:
+            for up_para in [300]: #[100,200]:
                 for county in ['xixiangxian','shufuxian','guanghexian','danfengxian','jiangzixian','honghexian','liboxian','linquanxian','jingyuxian','lingqiuxian']:
                 # for county in ['xixiangxian']:
                     # if os.path.exists('../../RoadNetwork_Validation_final/temp_output/GraphSamplingToolkit-main/xixiangxian_2017/groundtruth/xixiangxian_2017_edges_osm.txt'):
                     #                 #   /../../../../ \
                                     #   RoadNetwork_Validation_final/temp_output/GraphSamplingToolkit-main/xixiangxian_2017/groundtruth/xixiangxian_2017_vertices_osm.txt'):
                     #     print('True!!!!!!!!!!!!!!!!!!!!!!!!!!')
-                    mapcompare_d500_first_update('../temp_output_d500/GraphSamplingToolkit-main_update',county, 'xyx', 'LCR', year, up_para)
+                    mapcompare_d500_first_update('../temp_output_d500/GraphSamplingToolkit-main_update2',county, 'xyx', 'LCR', year, up_para)
                     # mapcompare_d500('../temp_output_d500/GraphSamplingToolkit-main_update',county, 'xyx', 'LCR', year, up_para)
                 # now_time = datetime.datetime.now()
                 # log_f.write(county+'   ' +str(year) +'  '+'mapcompare'+ '  '+str(now_time))
@@ -64,7 +64,7 @@ def main():
         #                           'img_weight':image_weight_list,'img_height':image_height_list})
         # pd_statis.to_csv('GT_statistics.csv', index=False)
 
-        for up_para in [100,200]:
+        for up_para in [300]:#[100,200]:
             df_all = pd.DataFrame({})
             # for year in [2017,2021]:
             for year in [2021]:
