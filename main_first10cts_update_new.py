@@ -28,6 +28,8 @@ def main():
             for up_para in [300]:
                 for county in ['xixiangxian','shufuxian','guanghexian','danfengxian','jiangzixian','honghexian','liboxian','linquanxian','jingyuxian','lingqiuxian']:
                 # for county in ['xixiangxian']:
+                    if os.path.exists('../output_update/'+county+'_'+str(year)+'_d500_'+str(up_para)+'_new.csv'):
+                        continue
                     # if os.path.exists('../../RoadNetwork_Validation_final/temp_output/GraphSamplingToolkit-main/xixiangxian_2017/groundtruth/xixiangxian_2017_edges_osm.txt'):
                     #                 #   /../../../../ \
                                     #   RoadNetwork_Validation_final/temp_output/GraphSamplingToolkit-main/xixiangxian_2017/groundtruth/xixiangxian_2017_vertices_osm.txt'):
