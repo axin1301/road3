@@ -28,13 +28,13 @@ def main():
             for up_para in [300]:
                 for county in ['xixiangxian','shufuxian','guanghexian','danfengxian','jiangzixian','honghexian','liboxian','linquanxian','jingyuxian','lingqiuxian']:
                 # for county in ['xixiangxian']:
-                    if os.path.exists('../output_update/'+county+'_'+str(year)+'_d500_'+str(up_para)+'_new.csv'):
+                    if os.path.exists('../output_update/'+county+'_'+str(year)+'_d500_'+str(up_para)+'_new2.csv'):
                         continue
                     # if os.path.exists('../../RoadNetwork_Validation_final/temp_output/GraphSamplingToolkit-main/xixiangxian_2017/groundtruth/xixiangxian_2017_edges_osm.txt'):
                     #                 #   /../../../../ \
                                     #   RoadNetwork_Validation_final/temp_output/GraphSamplingToolkit-main/xixiangxian_2017/groundtruth/xixiangxian_2017_vertices_osm.txt'):
                     #     print('True!!!!!!!!!!!!!!!!!!!!!!!!!!')
-                    mapcompare_d500_first_update_new('../temp_output_d500/GraphSamplingToolkit-main_improve4',county, 'xyx', 'LCR', year, up_para)
+                    mapcompare_d500_first_update_new('../temp_output_d500/GraphSamplingToolkit-main_improve5',county, 'xyx', 'LCR', year, up_para)
                     # mapcompare_d500('../temp_output_d500/GraphSamplingToolkit-main_update',county, 'xyx', 'LCR', year, up_para)
                 # now_time = datetime.datetime.now()
                 # log_f.write(county+'   ' +str(year) +'  '+'mapcompare'+ '  '+str(now_time))
@@ -71,13 +71,13 @@ def main():
             # for year in [2017,2021]:
             for year in [2021]:
                 for county in ['shufuxian','xixiangxian','guanghexian','danfengxian','jiangzixian','honghexian','liboxian','linquanxian','jingyuxian','lingqiuxian']:
-                    df = pd.read_csv('../output_update/'+county+'_'+str(year)+'_d500_'+str(up_para)+'_new.csv')
+                    df = pd.read_csv('../output_update/'+county+'_'+str(year)+'_d500_'+str(up_para)+'_new2.csv')
                     df_all = pd.concat([df_all, df])
                     # now_time = datetime.datetime.now()
                     # log_f.write(county +  '   ' +str(year) +'  '+'validation_statistics_all'+ '  '+str(now_time))
                     # log_f.write('\n')
 
-            df_all.to_csv('validation_statistics_all_first10cts_d500_2021_'+str(up_para)+'_new.csv', index=False)
+            df_all.to_csv('validation_statistics_all_first10cts_d500_2021_'+str(up_para)+'_new2.csv', index=False)
 
 
     # with open("time_log_first10cts_OSM.txt","w") as log_f:

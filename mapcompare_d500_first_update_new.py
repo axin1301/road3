@@ -1415,4 +1415,4 @@ def mapcompare_d500_first_update_new(data_path,dataset,solution,compute_mode,yea
     print("[MapCompare] Operations completed in {sec:.0f} seconds.\n".format(sec=time.time() - start_time))
     if not os.path.exists('../output_update/'):
         os.makedirs('../output_update/')
-    df.to_csv('../output_update/'+dataset+'_'+str(year)+'_d500'+'_'+str(up_para)+'_new.csv', index=False)
+    df.to_csv('../output_update/'+dataset+'_'+str(year)+'_d500'+'_'+str(up_para)+'_new2.csv', index=False)
